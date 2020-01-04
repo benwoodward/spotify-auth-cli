@@ -10,6 +10,9 @@
       .substring(1)
 
     fetch('/token?' + hash)
+      .then(() => {
+        window.close()
+      })
   </script>
 </body>
 </html>
