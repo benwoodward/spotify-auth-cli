@@ -6,13 +6,10 @@
 </head>
 <body>
   <script>
-    const hash = window.location.hash
+    const hash = window.location.search
       .substring(1)
 
-      fetch('/token?' + hash)
-      .then(() => {
-        window.close()
-      })
+    fetch('/token?' + hash)
   </script>
 </body>
 </html>
