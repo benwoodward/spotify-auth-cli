@@ -11,24 +11,11 @@ $ npm install -g spotify-auth-code-flow-cli
 
 2. Edit the settings for the client and add `http://localhost:4815/callback` to the list of Redirect URIs.
 
-3. Retrieve access tokens run the following command:
+3. Retrieve auth tokens run the following command:
 
 ```
 $ spotify-tokens --clientId "your-client-id" --clientSecret "your-client-secret"
 ```
-
-This will open the Spotify Login dialog in your default browser. After confirming, the window will close itself and if successful, you should see an access token in your console.
-
-4. Create the following file and save at `~/.config/vimify/vimify_config.json`:
-
-```json
-{
-  "tokens": {
-    "refresh_token": "your-refresh-token"
-  }
-}
-```
-
 
 ### Options
 Several options are available when running the `spotify-tokens` command.
