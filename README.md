@@ -3,27 +3,42 @@ A tiny helper tool that can be used to quickly fetch a Spotify access token from
 
 ### Installation
 ```
-$ npm install -g spotify-auth-cli
+$ npm install -g spotify-auth-code-flow-cli
 ```
 
 ### Usage
-To retrieve an access token run the following command:
+1. Register a Spotify API client via [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/applications)
+
+2. Edit the settings for the client and add `http://localhost:4815/callback` to the list of Redirect URIs.
+
+3. Retrieve access tokens run the following command:
 
 ```
-$ spotify-token
+$ spotify-tokens --clientId "your-client-id" --clientSecret "your-client-secret"
 ```
 
 This will open the Spotify Login dialog in your default browser. After confirming, the window will close itself and if successful, you should see an access token in your console.
 
+4. Create the following file and save at `~/.config/vimify/vimify_config.json`:
+
+```json
+{
+  "tokens": {
+    "refresh_token": "your-refresh-token"
+  }
+}
+```
+
+
 ### Options
-Several options are available when running the `spotify-token` command.
+Several options are available when running the `spotify-tokens` command.
 
 ##### Scope
 The `--scope` option can be used to specify the scopes you wish to access. For ease of use, this tool will by default request access to ALL available scopes, so use this option to limit that.
 
 Enter the scope as a comma separated list.
 ```
-$ spotify-token --scope user-read-private,playlist-modify-private
+$ spotify-tokens --scope user-read-private,playlist-modify-private
 ```
 
 #### Show Dialog

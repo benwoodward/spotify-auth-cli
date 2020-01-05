@@ -1,9 +1,9 @@
 {
-  "name": "spotify-auth-cli",
-  "version": "1.1.0",
-  "description": "Get a Spotify access token quickly and easily via your command line",
+  "name": "spotify-auth-code-flow-cli",
+  "version": "0.1.0",
+  "description": "Get Spotify 'Authorization Code Flow' tokens (access / refresh) via CLI",
   "main": "./lib/index.js",
-  "author": "Lawrence Holmes",
+  "author": "Ben Woodward",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.19.0",
@@ -15,6 +15,6 @@
   },
   "preferGlobal": true,
   "bin": {
-    "spotify-token": "./bin/spotify-token.js"
+    "spotify-tokens": "./bin/spotify-tokens.js"
   }
 }
