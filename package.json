@@ -1,6 +1,6 @@
 {
   "name": "spotify-auth-code-flow-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Get Spotify 'Authorization Code Flow' tokens (access / refresh) via CLI",
   "main": "./lib/index.js",
   "author": "Ben Woodward",
